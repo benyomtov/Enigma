@@ -1,18 +1,18 @@
-import './App.css';
+import React from 'react';
+import Key from './components/Key';
+
 
 function App() {
+
+  
+
   return (
     <div className="App">
       <h1>The Enigma Machine</h1>
       <div>
         <h2>Encrypt a message</h2>
         <form>
-          <p>Set your encoding key here:</p>
-          <button type="button" id="generateKey">
-            Generate a random key
-          </button>
-          <br />
-          <input type="text" id="encryptkey" name="encryptkey" />
+          <Key></Key>
           <p>Enter your message here:</p>
           <textarea name="message" id="message" rows="4" cols="50"></textarea>
           <br />
