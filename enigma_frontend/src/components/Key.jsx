@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Key () {
+export default function Key (props) {
 
         const [keyLength, setKeyLength] = useState(4);
         const [encryptKey, setEncryptKey] = useState('');
+
+        const generateKey = () => {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+           
+            let generatedKey = '';
+            for (let i = 0; i < keyLength; i++) { 
+                const randomIndex = Math.floor(Math.random() * chars.length);
+                generatedKey += chars[randomIndex];
+            }
+            setEncryptKey(generatedKey);
+            props.onKeyChange(generatedKey);
+        };
     
         const handleKeyLengthChange = (event) => {
           setKeyLength(event.target.value);
@@ -28,7 +40,7 @@ export default function Key () {
                  onChange = {handleKeyLengthChange}
                  />
           <br />
-          <button type="button" id="generateKey">
+          <button type="button" id="generateKey" onClick={() => generateKey(keyLength)}>
             Generate a random key
           </button>
           <br />

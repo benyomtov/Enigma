@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Key from './components/Key';
 
 
 function App() {
 
-  
+  const [encryptKeyFromChild, setEncryptKeyFromChild] = useState('');
+
+  useEffect (() => {
+    console.log(encryptKeyFromChild);
+  }, [encryptKeyFromChild]);
+
+  const handleEncryptKeyFromChild = (key) => {
+    setEncryptKeyFromChild(key);
+  }
 
   return (
     <div className="App">
@@ -12,7 +20,7 @@ function App() {
       <div>
         <h2>Encrypt a message</h2>
         <form>
-          <Key></Key>
+          <Key onKeyChange={handleEncryptKeyFromChild} />
           <p>Enter your message here:</p>
           <textarea name="message" id="message" rows="4" cols="50"></textarea>
           <br />
@@ -21,7 +29,7 @@ function App() {
       </div>
       <p>Your encrypted message is:</p>
       <textarea
-        readonly
+        readOnly
         name="encryptedMessage"
         id="encryptedMessage"
         rows="4"
