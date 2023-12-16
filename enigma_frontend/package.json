@@ -1,7 +1,7 @@
 {
   "name": "enigma_frontend",
   "version": "0.1.0",
-  "homepage": "benyomtov.github.io/Enigma",
+  "homepage": "https://benyomtov.github.io/Enigma",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
