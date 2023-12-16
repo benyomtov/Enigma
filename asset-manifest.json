@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/benyomtov.github.io/Enigma/static/css/main.31d6cfe0.css",
+    "main.js": "/benyomtov.github.io/Enigma/static/js/main.ae3e23fc.js",
+    "index.html": "/benyomtov.github.io/Enigma/index.html",
+    "main.ae3e23fc.js.map": "/benyomtov.github.io/Enigma/static/js/main.ae3e23fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.ae3e23fc.js"
+  ]
+}
