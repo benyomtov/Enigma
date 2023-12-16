@@ -22,8 +22,8 @@ export default function Key (props) {
         };
 
         useEffect(() => {
-            setEncryptKey('');
-        }, [keyLength]);
+            props.onKeyChange(encryptKey);
+        }, [props, encryptKey]);
 
     return (
         <div>
