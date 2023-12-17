@@ -1,6 +1,8 @@
 import React from 'react';
-import Encrypter from './components/Encrypter';
-import Decrypter from './components/Decrypter';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Encrypter from './components/Encrypter/Encrypter';
+import Decrypter from './components/Decrypter/Decrypter';
+import Title from './components/Title/Title';
 
 
 function App() {
@@ -8,12 +10,13 @@ function App() {
   
 
   return (
-    <div className="App">
-      <h1>The Enigma Machine</h1>
-      <Encrypter />
-      <Decrypter />
-        
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/*" element={<Title />} />
+        <Route path="/encrypter" element={<Encrypter />} />
+        <Route path="/decrypter" element={<Decrypter />} />
+      </Routes>
+    </Router>
   );
 }
 

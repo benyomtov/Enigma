@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Key from './Key';
+import Key from './Key/Key';
+import { Link } from 'react-router-dom';
 
 export default function Encrypter () {
 
@@ -50,39 +51,51 @@ export default function Encrypter () {
 
 
     return (
+      <div>
         <div>
-            <div>
-        <h2>Encrypt a message</h2>
-        <form>
-          <Key onKeyChange={handleEncryptKeyFromChild} />
-          <p>Enter your message here:</p>
-          <textarea name="message" 
-                    id="message" 
-                    rows="4" cols="50" 
-                    onChange={(e) => setMessage(e.target.value)} >
-                    </textarea>
+          <h2>Encrypt a message</h2>
+          <form>
+            <Key onKeyChange={handleEncryptKeyFromChild} />
+            <p>Enter your message here:</p>
+            <textarea
+              name="message"
+              id="message"
+              rows="4"
+              cols="50"
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+            <br />
+            <input
+              type="submit"
+              value="Generate your encrypted message"
+              onClick={handleEncryptMessage}
+            />
+          </form>
+        </div>
+        <div className="cryptedMessageForm">
+          <p>Your encrypted message is:</p>
+          <textarea
+            readOnly
+            name="encryptedMessage"
+            id="encryptedMessage"
+            value={encryptedMessage}
+            rows="4"
+            cols="50"
+          >
+            Generated text will appear here
+          </textarea>
           <br />
-          <input type="submit" value="Generate your encrypted message" onClick={handleEncryptMessage} />
-        </form>
+          <button
+            type="button"
+            id="copyToClipboard"
+            onClick={handleCopyToClipboard}
+          >
+            Copy to clipboard
+          </button>
+        </div>
+        <Link to="/">
+          <button>Back to home</button>
+        </Link>
       </div>
-      <p>Your encrypted message is:</p>
-      <textarea
-        readOnly
-        name="encryptedMessage"
-        id="encryptedMessage"
-        value={encryptedMessage}
-        rows="4"
-        cols="50"
-      >
-        Generated text will appear here
-      </textarea>
-      <br />
-      <button type="button" 
-      id="copyToClipboard"
-      onClick={handleCopyToClipboard}>
-        Copy to clipboard
-      </button>
-      <hr />
-      </div>
-        );
+    );
     }
