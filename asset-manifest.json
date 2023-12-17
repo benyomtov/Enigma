@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/Enigma/static/css/main.31d6cfe0.css",
-    "main.js": "/Enigma/static/js/main.ae3e23fc.js",
+    "main.css": "/Enigma/static/css/main.b79f6a2a.css",
+    "main.js": "/Enigma/static/js/main.6377ffc8.js",
+    "static/media/enigma.webp": "/Enigma/static/media/enigma.7f13b3f2c5a6b10abfa0.webp",
     "index.html": "/Enigma/index.html",
-    "main.ae3e23fc.js.map": "/Enigma/static/js/main.ae3e23fc.js.map"
+    "main.b79f6a2a.css.map": "/Enigma/static/css/main.b79f6a2a.css.map",
+    "main.6377ffc8.js.map": "/Enigma/static/js/main.6377ffc8.js.map"
   },
   "entrypoints": [
-    "static/css/main.31d6cfe0.css",
-    "static/js/main.ae3e23fc.js"
+    "static/css/main.b79f6a2a.css",
+    "static/js/main.6377ffc8.js"
   ]
 }
