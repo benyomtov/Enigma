@@ -43,7 +43,7 @@ export default function Decrypter() {
     <div>
       <h2>Decrypt a message</h2>
       <form onSubmit={handleDecryptMessage}>
-        <p>Enter your key here:</p>
+        <p>Enter your decryption key here:</p>
         <input
           type="text"
           id="decryptkey"
@@ -63,7 +63,7 @@ export default function Decrypter() {
           onChange={(e) => setMessageBeforeDecryption(e.target.value)}
         ></textarea>
         <br />
-        <input type="submit" value="Decrypt your message" />
+        <input type="submit" value="Decrypt your message" className="generateButton" />
       </form>
       <div className="cryptedMessageForm">
         <p>Your Decrypted Message:</p>

@@ -60,12 +60,14 @@ export default function Encrypter () {
             <textarea
               name="message"
               id="message"
+              className="textBox"
               rows="4"
               cols="50"
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <br />
             <input
+              className="generateButton"
               type="submit"
               value="Generate your encrypted message"
               onClick={handleEncryptMessage}
@@ -78,6 +80,7 @@ export default function Encrypter () {
             readOnly
             name="encryptedMessage"
             id="encryptedMessage"
+            className="textBox"
             value={encryptedMessage}
             rows="4"
             cols="50"

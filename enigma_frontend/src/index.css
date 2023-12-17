@@ -1,35 +1,89 @@
 body {
-    font-family: 'Courier Prime', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #292928;
+    font-family: 'Poppins', cursive;
+    color: #fff399;
+    width: 100%;
+    justify-content: center;
+    
   }
 
+#root {
+  width: 50%;
+  }
+
+  p {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-inline: 100px;
+    border : 3px solid #59ffa0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #59ffa0;
+    background-color: #B026ff;
+}
+
+button {
+    font-weight: bold;
+    border-radius: 6px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    border : 4px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #59ffa0;
+    background-color: #B026ff;
+}
+
+img {
+    border : 3px solid #59ffa0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #59ffa0;
+    background-color: #fff399;
+    width: 50%;
+    margin-bottom: 20px;
+} 
 
 h1 {
-    font-family: 'Courier Prime', cursive;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 64px;
     text-align: center;
+    text-shadow: #59ffa0 3px 3px 4px;
+    background-color: #b026ff;
+    border : 3px solid #59ffa0;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 5px;
+
     
   }
 
 h2 {
-    font-family: 'Courier Prime', cursive;
     font-weight: bold;
     font-size: 32px;
     text-align: center;
+    text-shadow: #59ffa0 3px 3px 4px;
+    background-color: #b026ff;
+    border : 3px solid #59ffa0;
+    border-radius: 20px;
+    padding: 10px;
+    margin-inline: 50px;
   }
 
 input {
-    font-family: 'Courier Prime', cursive;
     font-weight: bold;
     border-radius: 6px;
     margin: 10px;
     padding: 5px;
     font-size: 20px;
     text-align: center;
+    border : 3px solid #59ffa0;
   }
 
   form {
-    font-family: 'Courier Prime', cursive;;
     border-radius: 6px;
     margin: 10px;
     font-size: 20px;
@@ -37,29 +91,28 @@ input {
   }
 
   .cryptedMessageForm {
-    font-family: 'Courier Prime', cursive;
     border-radius: 6px;
     margin: 10px;
     font-size: 20px;
     text-align: center;
   }
 
-button {
-    font-family: 'Courier Prime', cursive;
+  button {
+    font-family: 'Poppins', cursive;
     font-weight: bold;
     border-radius: 6px;
     margin: 10px;
     font-size: 20px;
     text-align: center;
     padding: 5px;
-  }
+    color: #fff399;
+  } */
 
 textarea {
-    font-family: 'Courier Prime', cursive;
     font-weight: bold;
     border-radius: 6px;
     margin: 10px;
-    border: 2px solid black;
+    border: 3px solid #59ffa0;
     font-size: 20px;
     padding: 10px;
   }
@@ -67,3 +120,19 @@ textarea {
 hr {
     border: 1px solid black;
   }
+
+.generateButton {
+    font-family: 'Poppins', cursive;
+    font-weight: bold;
+    border-radius: 6px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    color: #fff399;
+    background-color: #00f56a;
+    border : 3px solid #59ffa0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #59ffa0;
+    text-shadow: #292928 3px 3px 4px;
+}
